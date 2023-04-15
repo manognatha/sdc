@@ -1,6 +1,7 @@
 body, html {
 height: 100% !important;
 }
+
 .centered {
 font-weight:700;
 left:50%;
@@ -50,7 +51,7 @@ font-size:3.5rem
 color:#212529;
 position:absolute;
 right:10px;
-top:15px
+top:9px
 }
 
 .text-custom {
@@ -59,6 +60,10 @@ color:#6F00FE
 
 .text-mechanta {
 color:# #FF5733
+}
+
+.custom-toggler .navbar-toggler-icon {
+background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#0f0' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 }
 
 .custom-toggler.navbar-toggler {
@@ -563,38 +568,51 @@ padding-top:3rem
 }
 
 @media only screen and (max-width: 800px) {
-#no-more-tables table,#no-more-tables thead,#no-more-tables tbody,#no-more-tables th,#no-more-tables td,#no-more-tables tr {
-display:block
-}
-
-#no-more-tables thead tr {
-left:-9999px;
-position:absolute;
-top:-9999px
-}
-
-#no-more-tables tr {
-border:1px solid #ccc
-}
-
-#no-more-tables td {
-border:none;
-border-bottom:1px solid #eee;
-padding-left:50%;
-position:relative;
-text-align:left;
-white-space:normal
-}
-
-#no-more-tables td:before {
-content:attr(data-title);
-font-weight:700;
-left:6px;
-padding-right:10px;
-position:absolute;
-text-align:left;
-top:6px;
-white-space:nowrap;
-width:45%
-}
+    
+    /* Force table to not be like tables anymore */
+	#no-more-tables table, 
+	#no-more-tables thead, 
+	#no-more-tables tbody, 
+	#no-more-tables th, 
+	#no-more-tables td, 
+	#no-more-tables tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#no-more-tables thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	#no-more-tables tr { border: 1px solid #ccc; }
+ 
+	#no-more-tables td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	#no-more-tables td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	#no-more-tables td:before { content: attr(data-title); }
 }
