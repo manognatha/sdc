@@ -54,10 +54,6 @@ right:10px;
 top:9px
 }
 
-.text-custom {
-color:#6F00FE
-}
-
 .text-mechanta {
 color:# #FF5733
 }
@@ -94,7 +90,7 @@ font-size:13px
 }
 
 div.delegates {
-min-height:400px
+min-height:250px
 }
 
 div.delegates1 {
@@ -179,7 +175,7 @@ box-shadow:0 2px 15px rgba(0,0,0,0.1);
 color:#000;
 left:20px;
 overflow:hidden;
-padding:20px 15px;
+padding:15px;
 position:absolute;
 right:20px;
 transition:.5s
@@ -187,10 +183,10 @@ transition:.5s
 
 .team .member h4 {
 color:#f0f;
-font-size:17px;
+font-size:16px;
 font-weight:700;
-margin-bottom:10px;
-padding-bottom:10px;
+margin-bottom:8px;
+padding-bottom:8px;
 position:relative
 }
 
@@ -272,7 +268,7 @@ margin-left:15px
 
 .navbar-default.navbar-trans .nav-link,.navbar-default.navbar-reduce .nav-link {
 color:#000;
-font-weight:500;
+font-weight:600;
 letter-spacing:.03em;
 padding-left:0;
 padding-right:0;
