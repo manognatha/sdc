@@ -1,0 +1,98 @@
+@media print {
+	#content, #page {
+	width: 100%; 
+	margin: 0; 
+	float: none;
+	}
+	@page { margin: .2cm }
+	body {
+	font-size: 12pt;
+	line-height: 1.5;
+	background: #fff !important;
+	color: #000;
+	}
+	.h6 {
+	font-size: 12pt;
+	font-weight:bold;
+	}
+	h1 {
+	font-size: 24pt;
+	}
+	h2, h3, h4 {
+	font-size: 14pt;
+	margin-top: 25px;
+	} 
+	a, blockquote, h1, h2, h3, h4, h5, h6, img, table, pre {
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid; /* Makes effect only in Firefox v20+ */
+		-moz-column-break-inside: avoid;
+		     break-inside: avoid; /* IE10+, Opera 11.1—12.1 */
+	}
+	h1, h2, h3, h4, h5, h6, img, ul, ol, dl { 
+		page-break-after:avoid; 
+		-webkit-column-break-after: avoid;
+		page-break-after: avoid; /* Makes effect only in Firefox v20+ */
+		-webkit-column-break-inside: after;
+		   -moz-column-break-inside: after;
+		        break-inside: after; /* IE10+, Opera 11.1—12.1 */
+		}
+	a:link, a:visited, a {
+	background: transparent;
+	color: #520;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: left;
+	}
+	a[href^=http]:after {
+		  content:" <" attr(href) "> ";
+	}
+	$a:after > img {
+	   content: "";
+	}
+	article a[href^="#"]:after {
+	   content: "";
+	}
+	a:not(:local-link):after {
+	   content:" <" attr(href) "> ";
+	}
+	.entry iframe, ins {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		overflow: hidden !important;
+		line-height: 0pt !important;
+		white-space: nowrap;
+	}
+	.embed-youtube, .embed-responsive {
+	  position: absolute;
+	  height: 0;
+	  overflow: hidden;
+	}
+	#header-widgets, nav, aside.mashsb-container, .sidebar, .mashshare-top, .mashshare-bottom, .content-ads, .make-comment, .author-bio, .heading, .related-posts, #decomments-form-add-comment, #breadcrumbs, #footer, .post-byline, .meta-single, .site-title img, .post-tags, .readability, #id1, #menu, #id3, #id4, #id5 {
+	display: none !important;
+	}
+	.entry:after {
+	content: "";
+	color: #999 !important;
+	font-size: 1em;
+	padding-top: 30px;
+	}
+	#header:before {
+	content: "";
+	color: #777 !important;
+	font-size: 1em;
+	padding-top: 30px;
+	text-align: center !important;    
+	}
+	p, address, li, dt, dd, blockquote {
+	font-size: 100%
+	}
+	code, pre { font-family: "Courier New", Courier, mono}
+	ul, ol {
+	list-style: square; margin-left: 18pt;
+	margin-bottom: 20pt;    
+	}
+	li {
+	line-height: 1.6em;
+	}
+}
